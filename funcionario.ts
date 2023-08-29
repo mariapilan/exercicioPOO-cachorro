@@ -21,7 +21,7 @@ class funcionario{
     } 
     apresentarImposto1(inss: number, ir: number){
         let valorINSS = (this.salario/100) * inss;
-        let valorIR = (this.salario/100 )* ir;
+        let valorIR = ((this.salario - valorINSS)/100 )* ir;
         let total = (valorINSS + valorIR)
         return " Salario Bruto: " + this.salario + "," + " Imposto do INSS de " + inss + "%, com valor de: R$" + valorINSS +
          ", " + "Imposto de Renda de " + ir + "%, com valor de: R$" + valorIR + ", " + "Total de Impostos: R$"+ (valorINSS + valorIR) + ", " + "Salário Líquido: R$" + (this.salario - total);
